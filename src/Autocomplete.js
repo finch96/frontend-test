@@ -10,9 +10,13 @@ function Autocomplete() {
 
   useEffect(() => {
     if(searchTerm !== "") {
-      fetchSuggestions(searchTerm).then((_suggestions) =>
-        setSuggestions(_suggestions)
-      );
+      const timeoutId = setTimeout(function() {
+        fetchSuggestions(searchTerm).then((_suggestions) =>
+          setSuggestions(_suggestions)
+        );
+      }, 500);
+
+      return () => clearTimeout(timeoutId);
     }
     else {
       setSuggestions([]);
