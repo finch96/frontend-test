@@ -1,3 +1,8 @@
+.autocomplete-container {
+  display: flex;
+  margin: auto;
+}
+
 .search-container {
   width: 30rem;
 }
@@ -11,7 +16,7 @@
 }
 
 .search-box:focus {
-  outline: 2px solid #16a2ff;
+  outline: 2px solid blue;
 }
 
 .search-results-dropdown {
@@ -38,6 +43,24 @@
 }
 
 .search-result-button:focus, .search-result-button:focus-visible {
-  outline: 2px solid #16a2ff;
+  outline: none;
+  background-color: blue;
   z-index: 10;
+  color: white;
+}
+
+.search-result-button:active {
+  background-color: grey;
+}
+
+@media screen and (max-width: 1000px) {
+  .autocomplete-container {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+  }
+
+  .truncate-search-results {
+    max-height: 6.5rem;
+    overflow-y: scroll;
+  }
 }
