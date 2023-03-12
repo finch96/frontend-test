@@ -1,18 +1,14 @@
 import React from "react";
 import {render, screen, waitFor} from '@testing-library/react'
 import userEvent from '@testing-library/user-event';
-import { fetchSuggestions, fetchProductDetails } from "./utils/api";
+import { fetchSuggestions, fetchProductDetail } from "./utils/api";
 
 import Autocomplete from "./Autocomplete";
 
-jest.mock("./utils/api", () => {
-  const originalModule = jest.requireActual("./utils/api");
-  return {
-    ...originalModule,
+jest.mock("./utils/api", () => ({
     fetchSuggestions: jest.fn(),
-    fetchProductDetails: jest.fn(),
-  }
-});
+    fetchProductDetail: jest.fn(),
+}));
 
 describe("Autocomplete", () => {
   it("renders correctly", () => {
@@ -79,7 +75,7 @@ describe("Autocomplete", () => {
       image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
     }
 
-    fetchProductDetails.mockResolvedValueOnce(productDetails);
+    fetchProductDetail.mockResolvedValueOnce(productDetails);
 
     render(<Autocomplete />);
 
@@ -105,7 +101,7 @@ describe("Autocomplete", () => {
       image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
     }
 
-    fetchProductDetails.mockResolvedValueOnce(productDetails);
+    fetchProductDetail.mockResolvedValueOnce(productDetails);
 
     render(<Autocomplete />);
 
