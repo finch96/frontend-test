@@ -1,3 +1,7 @@
+ul, li {
+  all: unset;
+}
+
 .autocomplete-container {
   display: flex;
   margin: auto;
@@ -27,6 +31,7 @@
 }
 
 .search-result-button {
+  width: 100%;
   background-color: white;
   font-size: 1rem;
   text-align: left;

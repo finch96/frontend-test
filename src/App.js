@@ -3,7 +3,6 @@ import React from "react";
 import "./App.css";
 
 import Autocomplete from "./Autocomplete";
-//import ProductDetail from "./ProductDetail";
 
 function App() {
 

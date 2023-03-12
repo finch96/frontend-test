@@ -42,9 +42,11 @@ function Autocomplete() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         {(suggestions.length !== 0) && <div className={`search-results-dropdown ${productId !== null && "truncate-search-results"}`}>
-          {suggestions.slice(0, 10).map(suggestion => (
-            <button onClick={(event) => selectOption(event)} className="search-result-button" key={suggestion.id} id={suggestion.id}>{suggestion.title}</button>
-          ))}
+          <ul>
+            {suggestions.slice(0, 10).map(suggestion => (
+              <li><button onClick={(event) => selectOption(event)} className="search-result-button" key={suggestion.id} id={suggestion.id}>{suggestion.title}</button></li>
+            ))}
+          </ul>
         </div>}
       </div>
       <ProductDetail productId={productId} />
