@@ -15,12 +15,12 @@ ul, li {
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
-  border: 2px solid #e4e4e4;
+  border: 0.13rem solid #e4e4e4;
   margin-top: -1rem;
 }
 
 .search-box:focus {
-  outline: 2px solid blue;
+  outline: 0.13rem solid blue;
 }
 
 .search-results-dropdown {
@@ -37,9 +37,9 @@ ul, li {
   text-align: left;
   padding: 1rem;
   border-top: 0;
-  border-left: 1px solid lightgrey;
-  border-right: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
+  border-left: 0.06rem solid lightgrey;
+  border-right: 0.06rem solid lightgrey;
+  border-bottom: 0.06rem solid lightgrey;
 }
 
 .search-result-button:hover {
