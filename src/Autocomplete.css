@@ -50,7 +50,6 @@ ul, li {
 .search-result-button:focus, .search-result-button:focus-visible {
   outline: none;
   background-color: blue;
-  z-index: 10;
   color: white;
 }
 
